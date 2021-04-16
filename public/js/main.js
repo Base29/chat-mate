@@ -21,6 +21,10 @@ chatForm.addEventListener('submit', (e) => {
 
     // Sending a message to the server
     socket.emit('chatMessage', msg);
+
+    // Clear message input field
+    e.target.elements.msg.value = '';
+    e.target.elements.msg.focus;
 });
 
 // Out message to frontend
